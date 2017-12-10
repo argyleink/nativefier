@@ -64,7 +64,7 @@ function createMainWindow(inpOptions, onAppQuit, setDockBadge) {
   });
 
   const mainWindow = new BrowserWindow({
-    frame: !options.hideWindowFrame,
+    // frame: !options.hideWindowFrame,
     width: mainWindowState.width,
     height: mainWindowState.height,
     minWidth: options.minWidth,
@@ -73,6 +73,7 @@ function createMainWindow(inpOptions, onAppQuit, setDockBadge) {
     maxHeight: options.maxHeight,
     x: mainWindowState.x,
     y: mainWindowState.y,
+    titleBarStyle: 'hidden',
     autoHideMenuBar: !options.showMenuBar,
     // Convert dashes to spaces because on linux the app name is joined with dashes
     title: options.name,

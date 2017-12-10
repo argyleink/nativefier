@@ -45,6 +45,8 @@ setNotificationCallback((title, opt) => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
+  window.document.body.innerHTML += `<div style="-webkit-app-region:drag;position:absolute;top: 0;left: 0;right: 0;height: 23px;"></div>`
+  
   window.addEventListener('contextmenu', (event) => {
     event.preventDefault();
     let targetElement = event.srcElement;
